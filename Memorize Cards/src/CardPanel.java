@@ -4,6 +4,7 @@ import java.awt.FlowLayout;
 import java.awt.Image;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.net.URL;
 import java.util.Arrays;
 
 import javax.swing.BoxLayout;
@@ -43,8 +44,9 @@ public class CardPanel extends JPanel{
 	}
 	
 	private ImageIcon setImageIcon(String cardName) {
-		ImageIcon imageHolder = new ImageIcon(new ImageIcon("cards/"+cardName+".png").getImage().getScaledInstance(691/5, 1056/5, Image.SCALE_SMOOTH));
-		
+		URL url = Main.class.getResource("/cards/" + cardName + ".png");
+		ImageIcon imageHolder = new ImageIcon(new ImageIcon(url).getImage().getScaledInstance(691/5, 1056/5, Image.SCALE_SMOOTH));
+
 		return imageHolder;
 	}
 	

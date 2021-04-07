@@ -31,7 +31,7 @@ public class CheckboxPanel extends JPanel {
 	
 	private JCheckBox createCheckbox(String checkboxLabel) {
 		JCheckBox checkbox = new JCheckBox(checkboxLabel, true);
-		
+		checkbox.setFocusable(false);
 		//create listener for checkbox
 		checkbox.addActionListener(new ActionListener() {
 			@Override
